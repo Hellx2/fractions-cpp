@@ -1,5 +1,6 @@
 #include "fractions.hh"
 
+#include <cstdlib>
 #include <iostream>
 #include <algorithm>
 #include <numeric>
