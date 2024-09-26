@@ -5,6 +5,12 @@
 #include <numeric>
 
 Fraction Fraction::simplify() {
+    int numerator = this->numerator;
+    int denominator = this->denominator;
+    if (numerator != std::abs(numerator) && denominator != std::abs(denominator)) {
+        numerator = -numerator;
+        denominator = -denominator;
+    }
     int x = std::gcd(numerator, denominator);
     return Fraction(numerator / x, denominator / x);
 }
